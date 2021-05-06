@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.kindsonthegenius.fleetapp.models.*;
 
 @Repository
-public interface ClientRepository extends JpaRepository<Client, Integer> {
+public interface VehicleMakeRepository extends JpaRepository<VehicleMake, Integer> {
 
 }
