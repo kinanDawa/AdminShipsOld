@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ClientController {
 	@GetMapping("/clients")
 	public String getClients() {
-		return "client";
+		return "Client";
 }
 }
