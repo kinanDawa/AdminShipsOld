@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class StateController {
 	
-	@GetMapping("/state")
+	@GetMapping("/states")
 	public String getStates() {
 		return "State";
 	}
