@@ -389,10 +389,35 @@
           </div>
         </div>
         <!-- page start-->
-        Page content goes here
+     <!--   Page content goes here-->
         
         <h1> List of Countries </h1>
         
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>Code</th>
+                    <th>Capital </th>
+                    <th> description</th>
+                    <th> nationality</th>
+                    <th>continent </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each = "country:${countries}"> 
+                    <td th:text="${country.id}"> </td>
+                    <td th:text="${country.code}"></td>
+                    <td th:text="${country.capital}"></td>
+                    <td th:text="${country.description}"></td>	
+                    <td th:text="${country.nationality}"></td>	
+                    <td th:text="${country.continent}"></td>	
+
+             
+                  </tr>
+         </tbody>
+         </table>
+         
         <!-- page end-->
       </section>
     </section>
