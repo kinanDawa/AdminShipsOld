@@ -391,7 +391,7 @@
         <!-- page start-->
      <!--   Page content goes here-->
         
-        <h1> List of Countries </h1>
+<!--        <h1> List of Countries </h1>-->
         
         <table class="table">
                 <thead>
@@ -405,8 +405,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr th:each = "country:${countries}"> 
-                    <td th:text="${country.id}"> </td>
+                  <tr th:each="Country:${countries}"> 
+                 
                     <td th:text="${country.code}"></td>
                     <td th:text="${country.capital}"></td>
                     <td th:text="${country.description}"></td>	
