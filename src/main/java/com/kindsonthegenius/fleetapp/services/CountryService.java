@@ -22,17 +22,19 @@ public class CountryService {
 	}	
 	
 	
-	/*
-	 * //Get Country By Id public Optional<Country> findById(int id) { return
-	 * countryRepository.findById(id); }
-	 * 
-	 * 
-	 * //Delete Country public void delete(int id) {
-	 * countryRepository.deleteById(id); }
-	 * 
-	 * //Update Country public void save( Country country) {
-	 * countryRepository.save(country); }
-	 */
+	
+	  //Get Country By Id public Optional<Country> findById(int id) { return
+	 // countryRepository.findById(id); }
+	  
+	  
+	  //Delete Country public void delete(int id) {
+	 // countryRepository.deleteById(id); }
+	  
+	 //Save or add a new Country
+	 public void save( Country country) {
+	  countryRepository.save(country); 
+	  }
+	 
 	 
 
 }
