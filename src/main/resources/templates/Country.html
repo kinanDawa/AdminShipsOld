@@ -405,6 +405,7 @@
                     <th> description</th>
                     <th> nationality</th>
                     <th>continent </th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -415,7 +416,12 @@
                     <td th:text="${country.description}"></td>	
                     <td th:text="${country.nationality}"></td>	
                     <td th:text="${country.continent}"></td>	
-
+					<td>
+					<div class="btn-group"> 
+					<a calss ="btn btn-primary">Edit</a>
+					
+					</div>
+					</td>
              
                   </tr>
          </tbody>
@@ -429,6 +435,7 @@
   </section>
   <!-- container section end -->
   
+   <!-- Add Modal section Start -->  
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -479,6 +486,63 @@
     </div>
   </div>
 </div>
+   <!-- Add Modal section End -->  
+
+  
+ <!-- Edit Modal section Start-->  
+ <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Country</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <form th:action="@{/countries/addNew}" method="post">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="descriptionEdit" name="desciption">
+          </div>
+          
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Capital:</label>
+            <input type="text" class="form-control" id="capitalEdit" name="capital">
+          </div>
+          
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Code:</label>
+            <input type="text" class="form-control" id="codeEdit" name="code">
+          </div>
+          
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Continent:</label>
+            <input type="text" class="form-control" id="continentEdit" name="continent">
+          </div>
+          
+           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nationality:</label>
+            <input type="text" class="form-control" id="nationalityEdit" name="nationality">
+          </div>
+          
+           <div class="form-group">
+             <button type="submit" class="btn btn-primary">Submit </button>
+          </div>
+        
+        </form>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Edit Modal section End -->  
+
+  
   
   <!-- javascripts -->
   <script src="js/jquery.js"></script>

@@ -38,8 +38,6 @@ public class Country {
 	
 	}
 
-
-
 	public Country(Integer id, String code, String capital, String description, String nationality, String continent, Integer id1) {
 		super();
 		this.id= id1;
