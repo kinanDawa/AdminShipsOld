@@ -1,11 +1,14 @@
 package com.kindsonthegenius.fleetapp.controllers;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kindsonthegenius.fleetapp.models.*;
 import com.kindsonthegenius.fleetapp.services.CountryService;
@@ -31,5 +34,13 @@ public class CountryController {
 	public String addNew(Country country) {
 		countryService.save(country);
 		return "redirect:/countries";
+	}
+	
+	@RequestMapping("/countries/findById") //after getting this Id we don't want it to return a JSON
+	//or redirect to a page that will display a JSON so only return it and capture it 
+	@ResponseBody
+	public Optional<Country> findById(int id) {
+		return countryService.findById(id);
+		 
 	}
 }

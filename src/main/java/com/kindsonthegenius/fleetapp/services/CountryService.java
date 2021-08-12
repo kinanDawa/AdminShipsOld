@@ -20,21 +20,21 @@ public class CountryService {
 	public List<Country> getCountries(){
 		return countryRepository.findAll();
 	}	
-	
-	
-	
-	  //Get Country By Id public Optional<Country> findById(int id) { return
-	 // countryRepository.findById(id); }
-	  
-	  
-	  //Delete Country public void delete(int id) {
-	 // countryRepository.deleteById(id); }
+
+	  //Get Country By Id 
+     //optional in case there's no result don't crush :)
+	 public Optional<Country> findById(int id) { 
+		 return countryRepository.findById(id);
+	 }
+	   
+	  //Delete Country 
+	 public void delete(int id) {
+	  countryRepository.deleteById(id); 
+	  }
 	  
 	 //Save or add a new Country
 	 public void save( Country country) {
 	  countryRepository.save(country); 
 	  }
-	 
-	 
 
 }
