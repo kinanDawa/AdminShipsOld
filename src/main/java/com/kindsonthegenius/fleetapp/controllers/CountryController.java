@@ -36,8 +36,9 @@ public class CountryController {
 		return "redirect:/countries";
 	}
 	
-	@RequestMapping("/countries/findById") //after getting this Id we don't want it to return a JSON
+	//after getting this Id we don't want it to return a JSON
 	//or redirect to a page that will display a JSON so only return it and capture it 
+	@RequestMapping("/countries/findById") 
 	@ResponseBody
 	public Optional<Country> findById(int id) {
 		return countryService.findById(id);

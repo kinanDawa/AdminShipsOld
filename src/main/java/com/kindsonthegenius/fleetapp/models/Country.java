@@ -57,6 +57,14 @@ public class Country {
 		this.code = code;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getCapital() {
 		return capital;
 	}

@@ -400,6 +400,7 @@
         <table class="table">
                 <thead>
                   <tr>
+                    <th>Id</th>
                     <th>Code</th>
                     <th>Capital </th>
                     <th> description</th>
@@ -410,7 +411,7 @@
                 </thead>
                 <tbody>
                   <tr th:each="country:${countries}"> 
-                 
+                    <td th:text="${country.id}"></td>
                     <td th:text="${country.code}"></td>
                     <td th:text="${country.capital}"></td>
                     <td th:text="${country.description}"></td>	
