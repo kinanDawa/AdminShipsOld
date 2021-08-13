@@ -449,6 +449,8 @@
       
       <div class="modal-body">
         <form th:action="@{/countries/addNew}" method="post">
+      
+          
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Description:</label>
             <input type="text" class="form-control" id="recipient-name" name="desciption">
@@ -502,7 +504,7 @@
       </div>
       
       <div class="modal-body">
-        <form th:action="@{/countries/addNew}" method="post">
+        <form th:action="@{/countries/update}" method="post">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Description:</label>
             <input type="text" class="form-control" id="descriptionEdit" name="desciption">
